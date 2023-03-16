@@ -76,7 +76,7 @@ height: 100vh;
     bottom: 0px;
 }
 
-#iconsLang {
+#container_iconsLang {
     background-color: rgba(27, 27, 27, 0.205);
     border: 1px solid rgb(255, 255, 255);
     border-left: none;
@@ -87,6 +87,7 @@ height: 100vh;
     margin-left: 80px;
     border-bottom-right-radius: 40px;
     transition: 1s;
+    
 }
 
 
@@ -98,7 +99,7 @@ height: 100vh;
         transform: translateX(-200px);
     }
     
-    #iconsLang {
+    #container_iconsLang {
         width: 80vw;
         flex-wrap: wrap;
         margin-left: 50%;
@@ -138,7 +139,7 @@ height: 100vh;
 
 
       
-    #iconsLang {
+    #container_iconsLang {
         display: flex;
         flex-wrap: wrap;
         margin-left: 50%;

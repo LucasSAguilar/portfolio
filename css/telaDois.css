@@ -26,13 +26,11 @@
     filter: drop-shadow(1px 1px 15px white); 
 }
 .IRS {
+    display: none;
     cursor: pointer;
-    opacity: 0;
-    transition: opacity 2s 0.4s;
     transition: 1s;
 }
 .IRS:hover {
-    transition: 1s;
     padding: 15px;
     filter: drop-shadow(1px 1px 15px white); 
 }
@@ -141,6 +139,18 @@
     }
 }
 
+@media only screen and (max-width: 600px){
+
+    #lucasIA {
+        height: 10vh;
+    }
+
+    .IRS {
+        height: 20px;
+    }
+
+
+}
 @media only screen and (max-height: 350px){ 
 
     .boxes {

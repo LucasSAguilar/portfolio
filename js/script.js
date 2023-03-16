@@ -1,14 +1,13 @@
-var btt = document.querySelector('#botoesNav')
-var cab = document.querySelector('#nav')
-var a = cab.style.maxWidth 
+var btt = $('#botoesNav')[0]
+var cab = $('#header_nav')
 
 // Header do mobile
-function mudar (){
+function mudar_menu_nav (){
 
     if (btt.className == 'desativado' ){
         btt.className = 'ativado'
     }
-    else{
+    else {
         btt.className  = 'desativado'
     }}
 
@@ -16,59 +15,77 @@ function fechar (){
     btt.className = 'desativado'
 }
 
-var contUm = 1
 
+var verificador_box_lang = 1
 // Icones das linguagens
 function mostrarIcons () {
-var icons = document.querySelector('#iconsLang')
-var seta = document.querySelector('#setaIcons')
+var box_icons = $('#container_iconsLang')
+var seta = $('#setaIcons')
+var icons = $('.icones_linguagens')
   
 
-    if (contUm == 1 ) {
-        icons.style.display = 'none'
-        seta.innerHTML = 'ᐁ'
+    if (verificador_box_lang == 1 ) {
+        seta.html('ᐁ')
+            icons.css({
+                transition: '1s',
+                height: '0px'
+                })
 
-        contUm = 0   
+            setTimeout(() => {
+                box_icons.css({
+                    borderBottom: 'none' 
+                })}, 1000); 
+
+verificador_box_lang = 0
+
     } else {
-        icons.style.display = 'flex'
- 
-        seta.innerHTML = `ᐃ`
-        contUm = 1
-    } 
-}
+        seta.html(`ᐃ`)
+        icons.css({height: '100px'})
+        box_icons.css({borderBottom: '1px solid white' })
+
+verificador_box_lang = 1
+    }}
+
+
+
+
 
 var contDois = 0 //true
 //1 = false
 function mostrarRS () {
-    var text = document.getElementById('txtClique')
-var iconesE = document.querySelector('#iconesE')
-var iconesD = document.querySelector('#iconesD')
-var link = document.querySelector('#linkedin')
-var insta = document.querySelector('#instagram')
-var gmail = document.querySelector('#gmail')
-var git = document.querySelector('#github')
-
+var iconesE = $('#iconesE')
+var iconesD = $('#iconesD')
+var link = $('#linkedin')
+var insta = $('#instagram')
+var gmail = $('#gmail')
+var git = $('#github')
+var allIcons = $('.IRS')
 
 if (contDois == 0){
-    iconesD.style.height = '70px'
-    iconesE.style.height = '70px'
-
-    link.style.opacity = '1'
-    insta.style.opacity = '1'
-    gmail.style.opacity = '1'
-    git.style.opacity = '1'
+    iconesD.css({height: '70px',})
+    iconesE.css({height: '70px',})    
+    allIcons.css({
+    display: 'flex',
+    opacity: '0'})
+    
+    setTimeout(()=>{
+    allIcons.css('opacity', '1')
+    }, 1000)
+    
     contDois = 1
  // ᐅ ᐊ
 } else if (contDois == 1){
 
-    iconesD.style.height = '0.1px'
-    iconesE.style.height = '0.1px'
+    allIcons.css('opacity', '0')
 
-    link.style.opacity = '0'
-
-    insta.style.opacity = '0'
-    gmail.style.opacity = '0'
-    git.style.opacity = '0'
+    setTimeout(()=>{
+        
+        allIcons.css('display', 'none')
+        iconesD.css('height', '0.1px')
+        iconesE.css('height', '0.1px')
+        
+    }, 1000)
+    
     contDois = 0
 }
 
@@ -96,7 +113,6 @@ contTres = 1
 }
 
 
-//setTimeout(() => {  mudarBox() }, 1000);
 }
 function email() {
 navigator.clipboard.writeText('lcsaguilar01@gmail.com');
@@ -131,3 +147,5 @@ function mudarContainer () {
         tituloCont.innerHTML = 'ATIVIDADES GERAIS'
         contQuatro = 1
     }}
+
+
