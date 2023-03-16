@@ -2,7 +2,7 @@
 
     height: 100vh;
     background-color: black;
-    background: url(../img/backgroundtex.png) no-repeat center center;
+    background: url(img/backgroundtex.png) no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
 
 
 #job_um {
-    background-image: url('../img/page_4/pk_run.png');
+    background-image: url('img/page_4/pk_run.png');
     transition: 1s;
 }
 
@@ -68,7 +68,7 @@
         }
 
 #job_dois {
-    background-image: url('../img/page_4/conforto_classe.png');
+    background-image: url('img/page_4/conforto_classe.png');
     transition: 1s;
 }
 
@@ -81,7 +81,7 @@
     }
 
 #job_tres {
-    background-image: url('../img/page_4/memoria.png');
+    background-image: url('img/page_4/memoria.png');
     transition: 1s;
 }
 

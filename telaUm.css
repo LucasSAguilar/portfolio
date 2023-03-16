@@ -16,7 +16,7 @@ body {
 
 
 main{
-background: url(../img/backgroundtex.png) no-repeat center center;
+background: url(img/backgroundtex.png) no-repeat center center;
 background-size: cover;
 height: 100vh;
 }

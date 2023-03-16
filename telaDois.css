@@ -2,7 +2,7 @@
     height: 100vh;
     border-bottom: 5px solid rgb(255, 255, 255);
     background-color: black;
-    background: url(../img/backgroundtex.png) no-repeat center center;
+    background: url(img/backgroundtex.png) no-repeat center center;
     background-size: cover;
     border-bottom: 5px solid rgb(107, 107, 107);
         }

@@ -1,7 +1,7 @@
 #telaTres {
     height: 100vh;
     background-color: black;
-    background: url(../img/backgroundtex.png) no-repeat center center;
+    background: url(img/backgroundtex.png) no-repeat center center;
     background-size: cover;
     color: rgb(194, 194, 194);
     border-bottom: 5px solid rgb(107, 107, 107);
